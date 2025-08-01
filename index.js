@@ -6,7 +6,7 @@ const fs = require('fs');
 require("dotenv").config();
 const { URLSearchParams } = require('url');
 
-const PI_API_SERVER = 'https://api.mainnet.minepi.com';
+const PI_API_SERVER = 'https://mainnet.zendshost.id';
 const PI_NETWORK_PASSPHRASE = 'Pi Network';
 const server = new StellarSdk.Server(PI_API_SERVER);
 
@@ -162,8 +162,8 @@ async function sendPi(mnemonic, recipientMuxedAddress, walletIndex) {
         index = (index + 1) % mnemonics.length;
 
         if (index === 0) {
-            console.log(`\n🔁 Siklus transfer semua wallet selesai. Menunggu 1 detik sebelum memulai ulang...`);
-            await sleep(1000);
+            console.log(`\n🔁 Siklus transfer semua wallet selesai. Menunggu 1 ms sebelum memulai ulang...`);
+            await sleep(1);
         }
     }
 })();
