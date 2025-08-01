@@ -157,7 +157,7 @@ async function sendPi(mnemonic, recipientMuxedAddress, walletIndex) {
     let index = 0;
     while (true) {
         await sendPi(mnemonics[index], recipient, index);
-        await sleep(1000); // ⏳ jeda antar wallet: 1 detik
+        await sleep(10); // ⏳ jeda antar wallet: 10 ms
 
         index = (index + 1) % mnemonics.length;
 
